@@ -293,6 +293,10 @@ body{
   color: #404bbf; 
  }
 
+ .mobile-link {
+  color: #2e2f42;
+ }
+
  .mobile-address-list {
   font-weight: 500;
  font-size: 20px;
@@ -370,7 +374,7 @@ body{
   @media screen and (min-resolution: 2dppx), 
   (min-resolution: 192dpi), (-webkit-min-device-pixel-ration: 2) {
     
-    .hero {;
+    .hero {
     background-image: linear-gradient(rgba(46, 47, 66, 0.7),rgba(46, 47, 66, 0.7)), url(../images/Dark-bg-mob-2x.jpg);
     }
   }
@@ -421,7 +425,7 @@ body{
  @media screen and (min-resolution: 2dppx), 
   (min-resolution: 192dpi), (-webkit-min-device-pixel-ration: 2) {
     
-  .hero {;
+  .hero {
   background-image: linear-gradient(rgba(46, 47, 66, 0.7),rgba(46, 47, 66, 0.7)), url(../images/Dark-bg-tab-2x.jpg);
   }
   }
@@ -446,7 +450,7 @@ body{
   @media screen and (min-resolution: 2dppx), 
   (min-resolution: 192dpi), (-webkit-min-device-pixel-ration: 2) {
     
-  .hero {;
+  .hero {
   background-image: linear-gradient(rgba(46, 47, 66, 0.7),rgba(46, 47, 66, 0.7)), url(../images/people-office-2x.jpg);
   }
   }
@@ -455,7 +459,9 @@ body{
   margin: 0 auto 48px;  
   }
   }
+
   /*---feature---*/
+
   @media screen and (min-width: 320px) {
   .feature {
   padding-top: 96px;
@@ -471,6 +477,12 @@ body{
 
  .icons{
  display: none;
+  }
+
+  .feature-list-item{
+  display: flex; 
+  flex-direction: column;
+  align-items: center;
   }
 
   .feature-list-item-title {
@@ -540,6 +552,7 @@ body{
  }
 
   /*----team----*/
+
   @media screen and (min-width: 320px) {
   .team {
   background-color: #f4f4fd;
@@ -579,6 +592,11 @@ body{
  box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08), 0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 1px 6px 0 rgba(46, 47, 66, 0.08);
  }
 
+ .block{
+  padding-top: 32px;
+  padding-bottom: 32px;
+ }
+
  .team-list-title {
   font-weight: 500;
   font-size: 20px;
@@ -602,7 +620,6 @@ body{
   display: flex;
   justify-content: center;
   gap: 24px;
-  padding-bottom: 32px;
  }
 
  .social-item{
@@ -665,8 +682,9 @@ body{
  }
 
  /*------portfolio------*/
+ 
  @media screen and (min-width: 320px) {
-.portfolio{
+ .portfolio{
   padding-top: 96px;
   padding-bottom: 96px;
   margin: 0 auto;
@@ -674,37 +692,35 @@ body{
 
  .portfolio-titel-main{
   margin-bottom: 72px;
-}
+ }
 
-.portfolio-list{
+ .portfolio-list{
+  display: flex;
+  flex-wrap: wrap;
   gap: 48px;
-}
+ }
 
-.card{
-  margin-bottom: 32px;
-}
-
-.portfolio-title{
+ .portfolio-title{
   font-weight: 500;
   font-size: 20px;
   line-height: 1.2;
   letter-spacing: 0.02em;
   color: #2e2f42;
   margin-bottom: 8px;
-}
+ }
 
-.portfolio-text{
+ .portfolio-text{
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: #434455;
-}
+ }
 
-.block-services{
+ .block-services{
   padding: 32px 16px;
   border: 1px solid #e7e9fc;
   border-top: none;
-}
+ }
  
  .portfolio-item {
   box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08), 0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 1px 6px 0 rgba(46, 47, 66, 0.08);
@@ -724,7 +740,7 @@ body{
   position: absolute;
   background-color: #4d5ae5;
   color: #f4f4fd;;
-   font-size: 16px;
+  font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
   top: 0;
@@ -735,22 +751,22 @@ body{
   transform: translateY(100%);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
  }
-}
+ }
 
-@media screen and (min-width: 768px) {
-.portfolio-list{
+ @media screen and (min-width: 768px) {
+ .portfolio-list{
   display: flex;
   flex-wrap: wrap;
   column-gap: 24px;
   row-gap: 72px;
-}
+ }
 
-.portfolio-item{
+ .portfolio-item{
   width: calc((100% - 24px) / 2);
-}
-}
+ }
+ }
 
-@media screen and (min-width: 1158px) {
+ @media screen and (min-width: 1158px) {
   .portfolio{
   padding-top: 120px;
   padding-bottom: 120px;
@@ -774,18 +790,27 @@ body{
   box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08), 0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 1px 6px 0 rgba(46, 47, 66, 0.08);
   background: #fff;
   }
-}
+ }
 
-/*------footer-----*/
-@media screen and (min-width: 320px) {
-.footer{
+ /*------footer-----*/
+ 
+  @media screen and (min-width: 320px) {
+ .footer{
   background: #2e2f42;
   padding-top: 96px;
   padding-bottom: 96px;
   margin: 0 auto;
  }
 
-.logo-white{
+ .container-footer{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  row-gap: 72px;
+ }
+
+ .logo-white{
   color: #f4f4fd;
  }
 
@@ -793,22 +818,20 @@ body{
   display: block;
   text-align: center;
   margin-bottom: 16px; 
-}
+ }
 
-.footer-text{
+ .footer-text{
   max-width: 288px;
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: #f4f4fd;
-  margin-bottom: 72px;
 }
 
 .footer-right{
   max-width: 208px;
   text-align: center;
   margin: 0 auto;
-  padding-bottom: 72px;
  }
 
 .media, .subscrib {
@@ -850,6 +873,9 @@ body{
   }
 
   .subscrib{
+  display: flex;
+  align-items: center;
+  justify-content: center; 
   margin-bottom: 16px;
   }
 
@@ -961,21 +987,23 @@ body{
  @media screen and (min-width: 1158px) {
 
   .footer{
-  padding-top: 100px;
-  padding-bottom: 100px;
+  padding: 100px 0;
   display: flex;
+  flex-wrap: nowrap;
   align-items: center;
-  justify-content: center;
+  gap: 0;
   }
 
   .container-footer{
   display: flex;
-  align-items: baseline;
-  padding-left: 0;
+  flex-wrap: nowrap;
+  align-items: center;
+  gap: 0;
+  padding-left: 16px;
   }
 
   .footer-left{
-  padding-right: 120px;
+  margin-right: 120px;
   }
 
   .footer-logo{
@@ -983,23 +1011,17 @@ body{
   }
 
   .footer-right{
+  margin-right: 80px;
   max-width: 208px;
   }
 
   .footer-subscribe{
-  justify-content: center;
   margin-left: auto;
-  }
-
-  .subscribel-window{
-  display: flex;
-  align-items: top;
-  gap: 24px; 
-  margin: 0;
   }
   } 
 
   /*-----modal----*/
+  
   @media screen and (min-width: 320px) {
   .backdrop{
   position: fixed;
@@ -1053,7 +1075,7 @@ body{
   display: flex;
   align-items: center;
   justify-content: center;
-    
+
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), 
   border 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
@@ -1092,7 +1114,6 @@ body{
   .modal-impyt{
   border: 1px solid rgba(46, 47, 66, 0.4);
   border-radius: 4px;
-  min-width: 256px;
   height: 40px;
   width: 100%;
   padding-left: 38px;
@@ -1113,8 +1134,6 @@ body{
 
   .form-modal{
   border-radius: 4px;
-  width: 256px;
-  height: 336px;
   }
 
   .modal-fieid-textarea{
@@ -1169,6 +1188,7 @@ body{
  }
 
  .checkbox-plase{
+  flex-shrink: 0;
  height: 16px;
  width: 16px;
  border-radius: 2px;
@@ -1235,16 +1255,8 @@ body{
 }
 
  @media screen and (min-width: 768px) {
-  .modal{
+ .modal{
   width: 408px;
   min-height: 584px;
-  }
-
-  .modal-impyt{
-  max-width: 360px;
-  }
-  .form-modal{
-  width: 360px;
-  height: 336px;
   }
 }
